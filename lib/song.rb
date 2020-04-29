@@ -22,7 +22,7 @@ class Song
   end
   def self.genre_count
     genre_count = {}
-    @@genres.each do |genre|
+    @@genres.uniq
       if genre_count[genre]
         genre_count[genre] += 1
       else
@@ -45,7 +45,7 @@ class Song
 end
 
 
-# 
+#
 # Song
 #   #new
 #     takes in three arguments: a name, artist and genre
